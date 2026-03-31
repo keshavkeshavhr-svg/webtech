@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li::marker{
+            content:" 🔺 ";
+        }
+        li::selection{
+            background-color: chartreuse;
+        }
+        h1::first-line{
+            background-color: blue;
+        }
+        h1::first-letter{
+            background-color: brown;
+        }
+        h1::before{
+            content: " frontend ";
+        }
+        h1::after{
+            content: " and css";
+        }
+    </style>
+</head>
+<body>
+    <h1>htm</h1>
+    <ol>
+        <li>keshav</li>
+        <li>sudeep</li>
+    </ol>
+</body>
+</html>
