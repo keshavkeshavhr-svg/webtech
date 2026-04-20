@@ -26,20 +26,16 @@
             display: flex;
             justify-content:space-evenly;
             align-items: center;
-            height: 650px;
-            border: 2px solid black;
+            height: 700px;
             background-color: rgb(232, 223, 213);
         }
+
         #child1,#child2,#child3{
-            height:300px;
-            width:300px;
-             background-color: white;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            border-radius:10%;
-            border: 2px solid black;
-            
+            height: 300px;
+            width: 300px;
+            flex-display:column;
+            border-radius:20%;
+            border: 1px solid black;
 
         }
        #child1 img,
@@ -47,20 +43,27 @@
        #child3 img{
         height: 250px;
         width: 250px;
-        border-radius: 10%;
-}
-         input{
+        border-radius: 20%;
+        
+       }
+        #child1 input{
             height: 20px;
             width: 180px;
             border-radius: 10px;
             border: 1px solid black;
+            
+            
+            
         }
          button{
             height: 20px;
             width: 100px;
             border-radius: 10px;
             border: 1px solid black;
+            
+            
         }
+        
     </style>
 </head>
 <body>
@@ -70,22 +73,30 @@
         </div>
     </nav>
     <div id="parent">
-        <div id="child1">
-            <div><img src="https://tse4.mm.bing.net/th/id/OIP.io3bq1GiRM04gfUuFzJT9wHaF7?pid=Api&P=0&h=180"></div>
-            <div><input type="text" placeholder="Enter km"></div>
-            <div><button style="background-color: black;color: white;">Book Now</button></div>
+        <div id="child1" >
+            <div ><img src="https://tse4.mm.bing.net/th/id/OIP.io3bq1GiRM04gfUuFzJT9wHaF7?pid=Api&P=0&h=180"></div>
+            <div ><input type="text" id="kilometer" placeholder="Enter km"></div>
+            <div ><button onclick="km()" style="background-color: black;color: white;">Book Now</button></div>
         </div>
                 <div id="child2">
             <div><img src="https://tse1.mm.bing.net/th/id/OIP.L0_CDiYftUFF_SzrFizJ1wHaE8?pid=Api&P=0&h=180"></div>
-            <div><input type="text" placeholder="Enter km"></div>
-            <div><button style="background-color: black;color: white;">Book Now</button></div>
+            <div><input  id="kilometer" type="text" placeholder="Enter km"></div>
+            <div><button onclick="km()" style="background-color: black;color: white;">Book Now</button></div>
         </div>
-        <div id="child3">
+        <div id="child3" >
             <div><img src="https://img.freepik.com/premium-vector/car-vector-illustration-classic-red-car-cartoon-transportation_648083-206.jpg?w=180"></div>
-            <div><input type="text" placeholder="Enter km"></div>
-            <div><button style="background-color: black;color: white;">Book Now</button></div>
+            <div><input id="kilometer" type="text" placeholder="Enter km"></div>
+            <div><button onclick="km()" style="background-color: black;color: white;">Book Now</button></div>
         </div>
 
     </div>
+    <script>
+        function km(){
+            let input = document.getElementById("kilometer").value;
+            alert(`Total RS charged for ${input} km is ${input*10} Rs`);
+
+        }
+
+    </script>
 </body>
 </html>

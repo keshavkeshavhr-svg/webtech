@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function createBankAccount(){
+            let balance = 0;
+            return {
+                deposit:function(amount){
+                    if(amount<=0){
+                        alert("invalid amount");
+                    } else {
+                        balance += amount;
+                        console.log(`deposit amount:${amount}, current balance:${balance}`);
+                    }
+                },
+                withdraw:function(amount){
+                    if (amount<=0){
+                        alert("invalid amount");
+                    } else if (amount>balance){
+                        alert("insufficient balance");
+                    } else {
+                        balance -= amount;
+                        console.log(`withdraw amount:${amount}, current balance:${balance}`);
+
+                    }
+                }
+            }
+        }
+        let xyz = createBankAccount();
+        xyz.deposit(100);
+        xyz.deposit(-50);
+        xyz.withdraw(50);
+    </script>
+</body>
+</html>
