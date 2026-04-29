@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let user={
+            name:"keshav",
+            dept:"cse",
+            course:"btech"
+        }
+        Object.seal(user);
+        console.log(user);
+        
+        //updateing
+        user.name="kumar";
+        console.log(user);//updateing only working in the sealing 
+
+        //adding
+        user.city="bengaluru";
+        console.log(user);//not working because we cannot add new properties in the sealing
+
+
+        //deleting
+        delete user.dept;
+        console.log(user);//not working because we cannot delete properties in the sealing
+
+    </script>
+</body>
+</html>
